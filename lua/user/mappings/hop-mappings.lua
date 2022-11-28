@@ -15,9 +15,12 @@ end --}}}
 -- one liner
 vim.keymap.set("n", "zf", "<cmd>HopChar1CurrentLine<cr>", { noremap = true, silent = true })
 vim.keymap.set("n", "zw", "<cmd>HopWordCurrentLine<cr>", { noremap = true, silent = true })
+vim.keymap.set("n", "za", "<cmd>HopAnywhereCurrentLine<cr>", { noremap = true, silent = true })
 ----------------------------
 vim.keymap.set("n", "zhh", "<cmd>HopLineStart<cr>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>zhh", "<cmd>HopLineStartMW<cr>", { noremap = true, silent = true })
+vim.keymap.set("n", "zhs", "<cmd>HopLineStart<cr>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Leader>zhs", "<cmd>HopLineStartMW<cr>", { noremap = true, silent = true })
 vim.keymap.set("n", "zhl", "<cmd>HopLine<cr>", { noremap = true, silent = true })
 vim.keymap.set("n", "zha", "<cmd>HopAnywhere<cr>", { noremap = true, silent = true })
 vim.keymap.set("n", "zhv", "<cmd>HopVerticalcr>", { noremap = true, silent = true })
