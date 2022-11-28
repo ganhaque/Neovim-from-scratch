@@ -1,5 +1,4 @@
 require "user.options"
-require "user.keymaps"
 require "user.plugins"
 require "user.colorscheme"
 require "user.cmp"
@@ -19,3 +18,11 @@ require "user.indentline"
 require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
+require "user.plugins.neo-minimap"
+
+-- Mappings
+require "user.mappings.keymaps"
+require "user.mappings.paragraph-jumping"
+require "user.mappings.hop-mappings"
+
+vim.cmd "colorscheme catppuccin-mocha" --set colorscheme

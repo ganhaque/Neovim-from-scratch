@@ -53,7 +53,7 @@ local setup = {
     height = { min = 4, max = 25 }, -- min and max height of the columns
     width = { min = 20, max = 50 }, -- min and max width of the columns
     spacing = 3, -- spacing between columns
-    align = "left", -- align columns left, center or right
+    align = "center", -- align columns left, center or right
   },
   ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
   hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
@@ -84,7 +84,7 @@ local mappings = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
   },
-  ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+  -- ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -183,5 +183,31 @@ local mappings = {
   },
 }
 
+-- local custommapping = {
+--     -- go to  beginning and end
+--     ["<A-s>"] = { "<ESC>^i", "beginning of line" },
+--     ["<A-e>"] = { "<End>", "end of line" },
+--     --custom
+--     ["<A-v>"] = { "<C-r>+", "paste clipboard"},
+--     ["<A-n>"] = { "<C-o>w", "move forward 1 word"},
+--     ["<A-b>"] = { "<C-o>b", "move backward 1 word"},
+--     ["<A-f>"] = { "<C-o>f", "search"},
+--     -- navigate within insert mode
+--     ["<A-h>"] = { "<Left>", "move left" },
+--     ["<A-l>"] = { "<Right>", "move right" },
+--     ["<A-j>"] = { "<Down>", "move down" },
+--     ["<A-k>"] = { "<Up>", "move up" },
+-- }
+--
+-- local customopts = {
+--   -- mode = "i", -- NORMAL mode
+--   -- prefix = "<leader>",
+--   buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+--   silent = true, -- use `silent` when creating keymaps
+--   noremap = true, -- use `noremap` when creating keymaps
+--   nowait = true, -- use `nowait` when creating keymaps
+-- }
+
 which_key.setup(setup)
 which_key.register(mappings, opts)
+-- which_key.register(custommapping, customopts)
