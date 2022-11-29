@@ -96,15 +96,6 @@ return packer.startup(function(use)
   }
 
   --todo/notetaking
-  -- neuron does not work
-  -- use "oberblastmeister/neuron.nvim"
-  -- use 'nvim-lua/popup.nvim' --dependency
-  -- obsidian
-  -- use { "epwalsh/obsidian.nvim", commit = "06c1d134b9bbfa40ed1285cbda1c24b0a09e59d8"}
-  -- use {'nvim-orgmode/orgmode', config = function()
-  --   require('orgmode').setup{}
-  -- end
-  -- }
 
   --misc.
   use({
