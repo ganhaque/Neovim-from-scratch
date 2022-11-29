@@ -95,6 +95,17 @@ return packer.startup(function(use)
   use { "chrisbra/Colorizer", commit = "715c91303f0f7a59b21af39c9d168d975ca2c831"
   }
 
+  --todo/notetaking
+  -- neuron does not work
+  -- use "oberblastmeister/neuron.nvim"
+  -- use 'nvim-lua/popup.nvim' --dependency
+  -- obsidian
+  -- use { "epwalsh/obsidian.nvim", commit = "06c1d134b9bbfa40ed1285cbda1c24b0a09e59d8"}
+  -- use {'nvim-orgmode/orgmode', config = function()
+  --   require('orgmode').setup{}
+  -- end
+  -- }
+
   --misc.
   use({
     "kylechui/nvim-surround",
@@ -107,6 +118,15 @@ return packer.startup(function(use)
   })
   -- use { "unblevable/quick-scope", commit = "428e8698347f254d24b248af9f656194a80081e5"}
   use { "ojroques/nvim-bufdel", commit = "a60b3531e5bd56f8602acb4ba7f5b2eeb782d54b"} -- make delete buffer easier (see custom mapping)
+  -- try (lack of wiki for nor...)
+  --   use {
+  --   'phaazon/mind.nvim',
+  --   branch = 'v2.2',
+  --   requires = { 'nvim-lua/plenary.nvim' },
+  --   config = function()
+  --     require'mind'.setup()
+  --   end
+  -- }
 
   --useless fun
   use 'eandrju/cellular-automaton.nvim' 
