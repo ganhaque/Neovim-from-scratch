@@ -94,8 +94,20 @@ return packer.startup(function(use)
   --colorizer
   use { "chrisbra/Colorizer", commit = "715c91303f0f7a59b21af39c9d168d975ca2c831"
   }
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
   --todo/notetaking
+  -- use { "vimwiki/vimwiki", commit = "63af6e72dd3fa840bffb3ebcb8c96970c02e0913"}
 
   --misc.
   use({
@@ -140,6 +152,18 @@ return packer.startup(function(use)
   use { "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" }
   use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
+  use {
+    "folke/trouble.nvim",
+    commit = "897542f90050c3230856bc6e45de58b94c700bbf",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
